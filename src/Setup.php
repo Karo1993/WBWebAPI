@@ -51,7 +51,7 @@ class Setup
         'locale' => 'ru',
         'lang' => 'ru',
         'curr' => 'rub',
-        'appType' => 1,
+        'apptype' => 1,
         'version' => 7
     ];
 
