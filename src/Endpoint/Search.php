@@ -66,7 +66,7 @@ class Search extends AbstractEndpoint
      */
     public function search(string $query, array $filter = [], int $page = 1, string $resultset = 'catalog', string $sort = 'popular'): object
     {
-        return $this->request('https://search.wb.ru/exactmatch/ru/common/v4/search', [
+        return $this->request('https://search.wb.ru/exactmatch/ru/common/v7/search', [
             'query' => $query,
             'page' => $page,
             'sort' => $sort,
