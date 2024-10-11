@@ -51,6 +51,8 @@ class Setup
         'locale' => 'ru',
         'lang' => 'ru',
         'curr' => 'rub',
+        'appType' => 1,
+        'version' => 7
     ];
 
     function __construct(array $options = [])
