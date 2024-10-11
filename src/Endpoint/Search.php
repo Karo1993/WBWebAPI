@@ -66,7 +66,7 @@ class Search extends AbstractEndpoint
      */
     public function search(string $query, array $filter = [], int $page = 1, string $resultset = 'catalog', string $sort = 'popular'): object
     {
-        return $this->request('https://search.wb.ru/exactmatch/ru/common/v7/search', [
+        return $this->request('https://search.wb.ru/exactmatch/ru/common/v'.$this->Setup->version().'/search', [
             'query' => $query,
             'page' => $page,
             'sort' => $sort,
@@ -80,7 +80,7 @@ class Search extends AbstractEndpoint
             'pricemarginCoeff' => $this->Setup->pricemarginCoeff(),
             'reg' => $this->Setup->reg(),
             'spp' => $this->Setup->spp(),
-            'appType' => 1,
+            'appType' => $this->Setup->appType(),
             'emp' => $this->Setup->emp(),
             'suppressSpellcheck' => 'false',
         ] + $filter);
